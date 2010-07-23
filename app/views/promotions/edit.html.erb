@@ -1,0 +1,16 @@
+<h1>Editing promotion</h1>
+
+<% form_for(@promotion) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render 'form' , :f => f %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+<% if can? :manage, @promotion %>
+	<%= link_to 'Show', @promotion %> |
+	<%= link_to 'Back', promotions_path %> | 
+    <%= link_to 'Destroy', @promotion, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>

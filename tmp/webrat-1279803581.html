@@ -1,0 +1,426 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Puresolo Market - Because we value!</title>
+    <link href="/stylesheets/application.css?1278866795" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/facebox.css?1278715819" media="screen" rel="stylesheet" type="text/css" />
+	<script src="/javascripts/jquery.js?1278661036" type="text/javascript"></script>
+<script src="/javascripts/jquery-ui.js?1278661036" type="text/javascript"></script>
+<script src="/javascripts/jrails.js?1278661036" type="text/javascript"></script>
+<script src="/javascripts/facebox.js?1278715794" type="text/javascript"></script>
+<script src="/javascripts/application.js?1278715228" type="text/javascript"></script>
+    
+  </head>
+  <body>
+    <div id="container">
+		<div id="logo">
+			<a href="http://www.example.com/"><img alt="Logo" src="/images/commons/logo.gif?1278866570" /></a>
+		</div>
+		<div id="user_nav">
+			
+			   <a href="http://www.example.com/">Home</a> | 
+				
+					<a href="/products/new">New Product</a> | 
+					<a href="/promotions">Promotions</a> | 
+				
+				<a href="http://www.example.com/cart" rel="facebox">Current Cart (0)</a> |
+				<a href="/users/current/edit" rel="facebox">Edit Profile</a> | 
+				<a href="/user_logout">Logout</a>
+			
+		</div>
+      <div id="clear"></div>
+
+      <h1>New promotion</h1>
+
+<form action="/promotions" class="new_promotion" id="new_promotion" method="post">
+  
+
+  <p>
+	<label for="promotion_name">Promotion Name</label><br />
+	<input id="promotion_name" name="promotion[name]" size="30" type="text" />
+</p>
+<p>
+  <label for="promotion_description">Brief Description</label><br />
+  <input id="promotion_description" name="promotion[description]" size="40" type="text" />
+</p>
+
+<table class="products">
+	<tr>
+		<th>Promotion Start</th>
+		<th></th>
+		<th>Promotion Stop</th>
+	</tr>
+	<tr>
+		<td>
+		<select id="promotion_start_1i" name="promotion[start(1i)]">
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option selected="selected" value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+</select>
+<select id="promotion_start_2i" name="promotion[start(2i)]">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option selected="selected" value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+<select id="promotion_start_3i" name="promotion[start(3i)]">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option selected="selected" value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+ &mdash; <select id="promotion_start_4i" name="promotion[start(4i)]">
+<option value="00">00</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option selected="selected" value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+</select>
+ : <select id="promotion_start_5i" name="promotion[start(5i)]">
+<option value="00">00</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option selected="selected" value="59">59</option>
+</select>
+</td>
+		<td></td>
+		<td>
+		<select id="promotion_end_1i" name="promotion[end(1i)]">
+<option value="2005">2005</option>
+<option value="2006">2006</option>
+<option value="2007">2007</option>
+<option value="2008">2008</option>
+<option value="2009">2009</option>
+<option selected="selected" value="2010">2010</option>
+<option value="2011">2011</option>
+<option value="2012">2012</option>
+<option value="2013">2013</option>
+<option value="2014">2014</option>
+<option value="2015">2015</option>
+</select>
+<select id="promotion_end_2i" name="promotion[end(2i)]">
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option selected="selected" value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+<select id="promotion_end_3i" name="promotion[end(3i)]">
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option selected="selected" value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+ &mdash; <select id="promotion_end_4i" name="promotion[end(4i)]">
+<option value="00">00</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option selected="selected" value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+</select>
+ : <select id="promotion_end_5i" name="promotion[end(5i)]">
+<option value="00">00</option>
+<option value="01">01</option>
+<option value="02">02</option>
+<option value="03">03</option>
+<option value="04">04</option>
+<option value="05">05</option>
+<option value="06">06</option>
+<option value="07">07</option>
+<option value="08">08</option>
+<option value="09">09</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+<option value="32">32</option>
+<option value="33">33</option>
+<option value="34">34</option>
+<option value="35">35</option>
+<option value="36">36</option>
+<option value="37">37</option>
+<option value="38">38</option>
+<option value="39">39</option>
+<option value="40">40</option>
+<option value="41">41</option>
+<option value="42">42</option>
+<option value="43">43</option>
+<option value="44">44</option>
+<option value="45">45</option>
+<option value="46">46</option>
+<option value="47">47</option>
+<option value="48">48</option>
+<option value="49">49</option>
+<option value="50">50</option>
+<option value="51">51</option>
+<option value="52">52</option>
+<option value="53">53</option>
+<option value="54">54</option>
+<option value="55">55</option>
+<option value="56">56</option>
+<option value="57">57</option>
+<option value="58">58</option>
+<option selected="selected" value="59">59</option>
+</select>
+</td>
+	</tr>
+	<tr>
+		<th>Code</th>
+		<th>Discount Type</th>
+		<th>Discount Amount</th>
+	</tr>
+
+	<tr>
+		<td>
+			 <input id="promotion_code" name="promotion[code]" size="30" type="text" />
+		</td>
+		<td>
+			<select id="promotion_discount_type" name="promotion[discount_type]"><option value="3">Buy x pay y</option>
+<option value="1">Buy x get 1 free</option>
+<option value="0" selected="selected">Percent of total order (for item category)</option>
+<option value="2">3 x 2</option></select>
+		</td>
+		<td>  
+			<input id="promotion_discount_amount" name="promotion[discount_amount]" size="30" type="text" value="0.0" />
+		</td>
+	</tr>
+</table>
+
+<p>
+	<label for="promotion_minimum_cart_value">Minimum Cart Value for this Promotion (not required)</label><br />
+	<input id="promotion_minimum_cart_value" name="promotion[minimum_cart_value]" size="5" type="text" value="0" />
+</p>
+
+<p>
+	  <label for="promotion_product_id">Attach this promotion to the items...</label><br />
+	  <div id="empty_product_container" class="empty_container">
+	
+	</p>
+	<p>
+	</p>
+</div>
+
+
+<div id="product_container" class="container_box" style="display:none">
+ <p>
+
+	<select name="promotion[product_ids][]">
+		<option value=""></option>
+		
+	</select>
+		<a href="/promotions/new" class="button" onclick="$(this).parent().fadeOut('slow', function() { $(this).remove()});return false;">Remove</a>
+ </p>
+</div>
+
+<p>
+	<a href="/promotions/new" class="button" onclick="addEmptyProduct();return false">Add a Product</a>
+</p>
+
+</p>
+
+<p>
+	<label for="promotion_activate">Activate</label><br />
+	<input name="promotion[active]" type="hidden" value="0" /><input id="promotion_active" name="promotion[active]" type="checkbox" value="1" />
+</p>
+
+
+
+  <p>
+    <input id="promotion_submit" name="commit" type="submit" value="Create" />
+  </p>
+</form>
+
+<a href="/promotions">Back</a>
+    </div>
+  </body>
+</html>

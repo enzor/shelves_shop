@@ -1,0 +1,15 @@
+== Head-market , a simple shop example
+
+This is a pretty useful exercise i've done!
+
+Maybe i will use this for the commercial module of Shelves!
+
+== Quick Setup ==
+
+1: rename config/database.example.yml to config/database.yml , and change it as you like
+2: run rake gems:install db:migrate db:seed
+3: script/server
+4: point your browser to http://localhost:3000/
+5: enjoy!!
+
+ps: if you are wondering , all example datas are in db/seeds.org :-)

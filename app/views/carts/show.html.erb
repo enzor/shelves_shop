@@ -1,0 +1,29 @@
+<% title "Shopping Cart" %>
+
+<table id="line_items" class="products" style="text-align:right">
+  <tr>
+    <th>Product</th>
+    <th>Qty</th>
+    <th class="price">Unit Price</th>
+    <th class="price">Full Price</th>
+  </tr>
+  <% for line_item in @cart.line_items %>
+    <tr class="<%= cycle :odd, :even %>">
+      <td><%=h line_item.product.name %> (<%= link_to "remove", line_item , :method => :delete, :confirm => "Are you sure?"%>)</td>
+      <td class="qty"><%= line_item.quantity %></td>
+      <td class="price"><%= number_to_currency_gbp(line_item.unit_price) %></td>
+      <td class="price"><%= number_to_currency_gbp(line_item.full_price) %></td>
+    </tr>
+  <% end %>
+  <tr>
+    <td class="total price" colspan="4" style="text-align:right">
+      <b>Total:</b> <%= number_to_currency_gbp @cart.total_price %>
+    </td>
+  </tr>
+</table>
+
+<p>
+  <%= link_to "Continue Shopping", root_url %> |
+  <%= link_to "Checkout", checkout_path(:cart => @cart) ,:method => :post %> |
+  <%= link_to "Empty Cart", @cart, :confirm => "Are you sure?", :method => :delete %>
+</p>

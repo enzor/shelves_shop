@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Puresolo Market - Because we value!</title>
+    <link href="/stylesheets/application.css?1278866795" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/facebox.css?1278715819" media="screen" rel="stylesheet" type="text/css" />
+	<script src="/javascripts/jquery.js?1278661036" type="text/javascript"></script>
+<script src="/javascripts/jquery-ui.js?1278661036" type="text/javascript"></script>
+<script src="/javascripts/jrails.js?1278661036" type="text/javascript"></script>
+<script src="/javascripts/facebox.js?1278715794" type="text/javascript"></script>
+<script src="/javascripts/application.js?1278715228" type="text/javascript"></script>
+    
+  </head>
+  <body>
+    <div id="container">
+		<div id="logo">
+			<a href="http://www.example.com/"><img alt="Logo" src="/images/commons/logo.gif?1278866570" /></a>
+		</div>
+		<div id="user_nav">
+			
+				<a href="/users/new">Register</a> | 
+				<a href="/user_login">Login</a> 
+			
+		</div>
+      <div id="clear"></div>
+
+      <h1>Registration</h1>
+
+<form action="/users" class="new_user" id="new_user" method="post">
+  <div class="errorExplanation" id="errorExplanation"><h2>2 errors prohibited this user from being saved</h2><p>There were problems with the following fields:</p><ul><li>Email is too short (minimum is 6 characters)</li><li>Email should look like an email address.</li></ul></div>
+
+  <p>
+  <label for="user_username">Username</label><br />
+  <input id="user_username" name="user[username]" size="30" type="text" value="Ciccio" />
+</p>
+<p>
+  <div class="fieldWithErrors"><label for="user_email">Email</label></div><br />
+  <div class="fieldWithErrors"><input id="user_email" name="user[email]" size="30" type="text" value="" /></div>
+</p>
+<p>
+  <label for="user_password">Password</label><br />
+  <input id="user_password" name="user[password]" size="30" type="password" />
+</p>
+<p>
+  <label for="user_password_confirmation">Password confirmation</label><br />
+  <input id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password" value="Pasticcio" />
+</p>
+
+<p>
+ <b> <label for="user_roles">Roles</label></b><br />
+  
+    <input class="radio" id="user_roles__admin" name="user[roles][]" type="radio" value="admin" />
+    Admin<br />
+  
+    <input checked="checked" class="radio" id="user_roles__user" name="user[roles][]" type="radio" value="user" />
+    User<br />
+  
+  <input id="user_roles_" name="user[roles][]" type="hidden" value="" />
+</p>
+
+  <p>
+    <input id="user_submit" name="commit" type="submit" value="Create" />
+  </p>
+</form>
+
+<a href="/users">Back</a>
+    </div>
+  </body>
+</html>

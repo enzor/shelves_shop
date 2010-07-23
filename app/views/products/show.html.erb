@@ -1,0 +1,21 @@
+<p>
+  <b>Name:</b>
+  <%=h @product.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @product.price %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @product.description %>
+</p>
+<% if can? :update, Cart %>
+	<%= link_to "Add to Cart", line_items_path(:product_id => @product), :method => :post %> | 
+<% end %>
+<% if can? :manage, @product %>
+	<%= link_to 'Edit', edit_product_path(@product) %> |
+<% end %>
+<%= link_to 'Back', root_url %>

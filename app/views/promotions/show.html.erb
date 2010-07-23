@@ -1,0 +1,44 @@
+<p>
+  <b>Code:</b>
+  <%=h @promotion.code %>
+</p>
+
+<p>
+  <b>Discount type:</b>
+  <%=h @promotion.discount_type == 0 ? "Percent of total order" : "Buy x get 1 free" %>
+</p>
+
+<p>
+  <b>Discount amount:</b>
+  <%=h @promotion.discount_amount %>
+</p>
+
+<p>
+  <b>Items:</b>
+<ul>
+  <% @promotion.products.each do |p| %>
+	<li><%=h p.name %></li>
+  <% end %>
+</ul>
+</p>
+
+<p>
+  <b>Start:</b>
+  <%=h @promotion.start.strftime("%d-%m-%Y %H:%M") %>
+</p>
+
+<p>
+  <b>End:</b>
+  <%=h @promotion.end.strftime("%d-%m-%Y %H:%M")  %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @promotion.description %>
+</p>
+
+<% if can? :manage, @promotion %>
+	<%= link_to 'Edit', edit_promotion_path(@promotion) %> |
+	<%= link_to 'Back', promotions_path %> | 
+	<%= link_to 'Destroy', @promotion, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>

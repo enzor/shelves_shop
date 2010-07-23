@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Puresolo Market - Because we value!</title>
+    <link href="/stylesheets/application.css?1278866795" media="screen" rel="stylesheet" type="text/css" />
+<link href="/stylesheets/facebox.css?1278715819" media="screen" rel="stylesheet" type="text/css" />
+	<script src="/javascripts/jquery.js?1278661036" type="text/javascript"></script>
+<script src="/javascripts/jquery-ui.js?1278661036" type="text/javascript"></script>
+<script src="/javascripts/jrails.js?1278661036" type="text/javascript"></script>
+<script src="/javascripts/facebox.js?1278715794" type="text/javascript"></script>
+<script src="/javascripts/application.js?1278715228" type="text/javascript"></script>
+    
+  </head>
+  <body>
+    <div id="container">
+		<div id="logo">
+			<a href="http://www.example.com/"><img alt="Logo" src="/images/commons/logo.gif?1278866570" /></a>
+		</div>
+		<div id="user_nav">
+			
+			   <a href="http://www.example.com/">Home</a> | 
+				
+					<a href="/products/new">New Product</a> | 
+					<a href="/promotions">Promotions</a> | 
+				
+				<a href="http://www.example.com/cart" rel="facebox">Current Cart (0)</a> |
+				<a href="/users/current/edit" rel="facebox">Edit Profile</a> | 
+				<a href="/user_logout">Logout</a>
+			
+		</div>
+      <div id="clear"></div>
+        <div id="flash_notice">Promotion was successfully updated.</div>
+
+      <h1>Listing promotions</h1>
+
+<table class="products">
+	<colgroup>
+		<col width="100px" />
+	</colgroup>
+  <tr>
+    <th>Code</th>
+	<th>Name</th>
+    <th>Description</th>
+  </tr>
+
+
+  <tr>
+    <td>DISCOUNT_MY_GEL</td>
+	<td><a href="/promotions/1">Great Shower Gel Promotion</a>
+    <td>2 Shower Gel will make you pay only 2£</td>
+
+    <td><a href="/promotions/1/edit">Edit</a></td>
+    <td><a href="/promotions/1" onclick="if (confirm('Are you sure?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var m = document.createElement('input'); m.setAttribute('type', 'hidden'); m.setAttribute('name', '_method'); m.setAttribute('value', 'delete'); f.appendChild(m);f.submit(); };return false;">Destroy</a></td>
+
+  </tr>
+
+</table>
+
+<br />
+
+<a href="/promotions/new">New promotion</a>
+    </div>
+  </body>
+</html>

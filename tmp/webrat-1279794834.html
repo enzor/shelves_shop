@@ -1,0 +1,40 @@
+<h1>Editing user</h1>
+
+<form action="/users/1" class="edit_user" id="edit_user_1" method="post"><div style="margin:0;padding:0;display:inline"><input name="_method" type="hidden" value="put" /></div>
+  
+
+ <p>
+  <label for="user_username">Username</label><br />
+  <input id="user_username" name="user[username]" size="30" type="text" value="vincenzo" />
+</p>
+<p>
+  <label for="user_email">Email</label><br />
+  <input id="user_email" name="user[email]" size="30" type="text" value="vincenzo.rivello@gmail.com" />
+</p>
+<p>
+  <label for="user_password">Password</label><br />
+  <input id="user_password" name="user[password]" size="30" type="password" />
+</p>
+<p>
+  <label for="user_password_confirmation">Password confirmation</label><br />
+  <input id="user_password_confirmation" name="user[password_confirmation]" size="30" type="password" />
+</p>
+
+<p>
+ <b> <label for="user_roles">Roles</label></b><br />
+  
+    <input class="radio" id="user_roles__admin" name="user[roles][]" type="radio" value="admin" />
+    Admin<br />
+  
+    <input checked="checked" class="radio" id="user_roles__user" name="user[roles][]" type="radio" value="user" />
+    User<br />
+  
+  <input id="user_roles_" name="user[roles][]" type="hidden" value="" />
+</p>
+  <p>
+    <input id="user_submit" name="commit" type="submit" value="Update" />
+  </p>
+</form>
+
+<a href="/users/1">Show</a> |
+<a href="http://www.example.com/">Back</a>

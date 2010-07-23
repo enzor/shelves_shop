@@ -1,0 +1,25 @@
+<p>
+  <%= f.label :username %><br />
+  <%= f.text_field :username %>
+</p>
+<p>
+  <%= f.label :email %><br />
+  <%= f.text_field :email %>
+</p>
+<p>
+  <%= f.label :password %><br />
+  <%= f.password_field :password %>
+</p>
+<p>
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %>
+</p>
+
+<p>
+ <b> <%= f.label :roles %></b><br />
+  <% for role in User::ROLES %>
+    <%= radio_button_tag "user[roles][]", role, @user.roles.include?(role) , :class => 'radio'%>
+    <%=h role.humanize %><br />
+  <% end %>
+  <%= hidden_field_tag "user[roles][]", "" %>
+</p>
