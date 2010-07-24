@@ -35,23 +35,31 @@
 		</td>
 		<td>  
 			<b><%= f.label :discount_amount %></b><br />
-			<%= f.text_field :discount_amount %>
+			<%= f.text_field :discount_amount %> 
+			
 		</td>
+		<tr>
+			<td colspan="2">
+			</td>
+			<td>
+				<span class="info">Converted to percentage in 'Percent of total order' and in an actual price for 'Buy x pay y'. Doesn't have any function in the other cases</span>
+			</td>
+		</tr>
 	</tr>
 </table>
 
 <p>
-	<%= f.label :minimum_cart_value , "Minimum Cart Value for this Promotion (not required)"%><br />
+	<b><%= f.label :minimum_cart_value , "Minimum Cart Value for this Promotion"%></b><br />
 	<%= f.text_field :minimum_cart_value , :size => 5%>
 </p>
 
 <p>
-	  <%= f.label :product_id, "Attach this promotion to the items..." %><br />
+	  <b><%= f.label :product_id, "Attach this promotion to the items..." %></b><br />
 	  <%= render :partial => 'attached_products', :locals => {:name => "promotion", :object => @promotion }%>
 </p>
 
 <p>
-	<%= f.label :active, "Activate" %><br />
+	<b><%= f.label :active, "Activate" %></b><br />
 	<%= f.check_box :active%>
 </p>
 

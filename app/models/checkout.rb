@@ -18,9 +18,8 @@ class Checkout < ActiveRecord::Base
       @promo = Promotion.find(@product.promotion) if @product.promotion
         if @promo && @promo.is_active?
 
-            @items = @cart.line_items.find_all_by_product_id(@product.id)
+          @items = @cart.line_items.find_all_by_product_id(@product.id)
            case @promo.discount_type
-    
              when 0 then
                logger.info("case 0, #{c[0]}, #{c[1]}, promo minimum cart value #{@promo.minimum_cart_value}, discount percentage #{@promo.discount_amount}%")
                if c[1] >= @promo.minimum_cart_value 

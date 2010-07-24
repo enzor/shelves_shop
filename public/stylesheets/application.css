@@ -105,3 +105,10 @@ table.products tr th {
 #clear {
 	 clear:both;
 }
+
+.info {
+	font-size: 10px;
+	font-style:italic;
+	color: #666666;
+	line-height: 12px;
+}
