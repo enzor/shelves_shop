@@ -39,7 +39,6 @@ Scenario: Third Case
   And I follow "Checkout"
   Then I should see "£1.9"
 
-@wip
 Scenario: Fourth Case
   When I add "1" of "Shower Gel" to the cart
   And I add "1" of "Shower Gel" to the cart

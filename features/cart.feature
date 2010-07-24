@@ -16,7 +16,6 @@ Scenario: Correct Generation of Products
   And I should see "BR1"
   And I should see "MK1"
   And I should see "SG1"
-  Then show me the page
 
 Scenario: Add Product to the cart
   When I follow "Orange"

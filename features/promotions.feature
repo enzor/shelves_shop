@@ -16,11 +16,10 @@ Scenario: Promotion Creation
   And I select "July 22, 2010, 15:00" as the "End" date and time
   And I fill in "Code" with "SG1"
   And I select "Buy x get 1 free" from "Discount type" 
-  And I fill in "Minimum Cart Value for this Promotion (not required)" with "3"
+  And I fill in "Minimum Cart Value for this Promotion" with "3"
   And I check "Activate"
   And I press "Create"
   Then I should see "Shower Gel Promotion"
-  Then show me the page
 
 
 Scenario: Promotion Editing
@@ -32,8 +31,6 @@ Scenario: Promotion Editing
   When I fill in "Promotion Name" with "Great Shower Gel Promotion"
   And I press "Update"
   Then I should see "Great Shower Gel Promotion"
-  Then show me the page
-  
 
 
 Scenario: Promotion Destroy

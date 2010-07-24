@@ -6,6 +6,10 @@ Given /^a logged valid user$/ do
   click_button "Login"
 end
 
+Given /^a valid user$/ do
+  @user = Factory.create(:user,:roles_mask => 2)
+end
+
 Given /^a logged valid admin$/ do 
  @user = Factory.create(:user,:roles_mask => 1)
   visit login_path

@@ -16,7 +16,7 @@ Scenario: Successful registration
   Then I should be on the home page
 
 Scenario: Login
-  Given a logged valid user
+  Given a valid user
   When I go to the home page
   And I follow "Login"
   And I fill in "Username" with "vincenzo"
@@ -27,12 +27,12 @@ Scenario: Login
 
 Scenario: Edit my data
   Given a logged valid user
-  When I go to the home 
+  When I go to the home page
   And I follow "Edit Profile"
   And I fill in "Password" with "cucumber"
   And I fill in "Password Confirmation" with "cucumber"
   And I press "Update"
-  Then I should be in the home page
+  Then I should be on the home page
 
 
 
